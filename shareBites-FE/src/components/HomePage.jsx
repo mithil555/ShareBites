@@ -5,11 +5,11 @@ function HomePage() {
   const [foods, setFoods] = useState([]);
 
   const fetchFoods = () => {
-    axios.get('http://localhost:8080/api/food').then((res) => setFoods(res.data));
+    axios.get('https://sharebites.onrender.com/api/food').then((res) => setFoods(res.data));
   };
 
   const deleteFood = (id) => {
-    axios.delete(`http://localhost:8080/api/food/${id}`).then(fetchFoods);
+    axios.delete(`https://sharebites.onrender.com/api/food/${id}`).then(fetchFoods);
   };
 
   useEffect(() => { fetchFoods(); }, []);

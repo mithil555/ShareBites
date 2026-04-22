@@ -24,7 +24,7 @@ function AddFoodPage({ navigate }) {
       alert('Please fill in at least the Food Name and Location.');
       return;
     }
-    axios.post('http://localhost:8080/api/food', { ...food, image: imageBase64 })
+    axios.post('https://sharebites.onrender.com/api/food', { ...food, image: imageBase64 })
       .then(() => navigate('home'));
   };
 
